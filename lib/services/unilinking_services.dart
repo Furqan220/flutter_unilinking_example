@@ -4,6 +4,7 @@ import 'package:app_links/app_links.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_uni_link/blue_screen.dart';
+import 'package:flutter_uni_link/red_screen.dart';
 import 'package:flutter_uni_link/services/context_utiltiy.dart';
 
 class UniversalLinkingServices {
@@ -47,12 +48,12 @@ class UniversalLinkingServices {
           MaterialPageRoute(
             builder: (_) => const BlueScreen(),
           ));
-    }
-   else if (receivedCode == 'red') {
+    } else if (receivedCode == 'red') {
       Navigator.push(
           ContextUtility.context!,
           MaterialPageRoute(
-            builder: (_) => const BlueScreen(),
+            
+            builder: (_) => const RedScreen(),
           ));
     }
   }
